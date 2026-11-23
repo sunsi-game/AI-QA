@@ -7,7 +7,9 @@
 
 **검증 결과:** 기본 설정 3개, 게임 동작 3개 통과 → 의도적 결함 주입 시 충돌 검사 1개 실패 → 원본 복원과 재빌드 후 6개 재통과
 
-[자동화 도구 안내](Tools/ChickenQA/README.md) · [테스트 실행](Tools/ChickenQA/docs/STEP4_UNREAL_AUTOMATION.md) · [결함 탐지 시연](Tools/ChickenQA/docs/FAULT_DEMO.md) · [포트폴리오](https://app.notion.com/p/41ffed4e19b9807ea26ac678663f48a3)
+[자동화 도구 안내](Tools/ChickenQA/README.md) 
+[테스트 실행](Tools/ChickenQA/docs/STEP4_UNREAL_AUTOMATION.md)  
+[결함 탐지 시연](Tools/ChickenQA/docs/FAULT_DEMO.md)
 
 ## 프로젝트 목표
 
