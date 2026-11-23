@@ -9,6 +9,7 @@
 #include "Net/UnrealNetwork.h"
 #include "HAL/IConsoleManager.h"
 
+DEFINE_LOG_CATEGORY_STATIC(LogChickenQA, Log, All);
 DEFINE_LOG_CATEGORY_STATIC(LogChickenCollision, Log, All);
 DEFINE_LOG_CATEGORY_STATIC(LogChickenTilt, Log, All);
 DEFINE_LOG_CATEGORY_STATIC(LogChickenMovement, Log, All);
@@ -78,6 +79,15 @@ void AChickenCharacter::DebugPostPush(const TCHAR* Observation)
 {
     if (DebugPendingPushCount > 0 && GFrameCounter > DebugPushFrame)
     {
+        UE_LOG(
+            LogChickenQA,
+            Display,
+            TEXT("[PostPush] Character=%s RequestedDeltaV=%s Velocity=%s"),
+            *GetName(),
+            *DebugPendingImpulse.ToString(),
+            *GetVelocity().ToString()
+        );
+
         CF_EVENT(LogChickenCollision, "PostPush FirstFrame=%llu Count=%d RequestedDeltaV=%s Before=%s Observed=%s Position=%s Fallen=%d Pending=%d Mode=%s Observation=%s",
             static_cast<unsigned long long>(DebugPushFrame), DebugPendingPushCount,
             *DebugPendingImpulse.ToString(), *DebugPushVelocity.ToString(), *GetVelocity().ToString(),
@@ -94,6 +104,18 @@ void AChickenCharacter::DebugMovementUpdated(float DeltaSeconds, FVector OldLoca
         DeltaSeconds, *GetLastMovementInputVector().ToString(), *GetCharacterMovement()->GetCurrentAcceleration().ToString(),
         *OldVelocity.ToString(), *GetVelocity().ToString(), GetVelocity().Size(),
         *(GetActorLocation() - OldLocation).ToString(), *GetCharacterMovement()->GetMovementName(), bIsFallen);
+
+    if ((GFrameCounter % 60) == 0)
+    {
+        UE_LOG(
+            LogChickenQA,
+            Display,
+            TEXT("[MovementUpdate] Character=%s Velocity=%s Fallen=%d"),
+            *GetName(),
+            *GetVelocity().ToString(),
+            bIsFallen ? 1 : 0
+        );
+    }
 }
 
 void AChickenCharacter::OnMovementModeChanged(

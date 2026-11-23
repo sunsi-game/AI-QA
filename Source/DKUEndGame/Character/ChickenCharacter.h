@@ -14,6 +14,9 @@ class DKUENDGAME_API AChickenCharacter : public ACharacter
 	GENERATED_BODY()
 
 public:
+#if WITH_DEV_AUTOMATION_TESTS
+    friend struct FChickenQAGameplayAccess;
+#endif
 	AChickenCharacter();
 
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;

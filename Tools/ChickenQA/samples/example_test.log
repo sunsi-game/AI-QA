@@ -1,0 +1,4 @@
+LogAutomationController: Display: Test Started. Name={Collision Direction} Path={ChickenQA.Collision.Direction}
+LogAutomationController: Display: Test Completed. Result=Passed. Name={Collision Direction} Path={ChickenQA.Collision.Direction}
+LogAutomationController: Display: Test Completed. Result=Failed. Name={Knockdown Threshold} Path={ChickenQA.Knockdown.Threshold}
+LogAutomationController: Display: **** TEST COMPLETE. EXIT CODE: 1 ****

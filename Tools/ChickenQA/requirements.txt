@@ -1,0 +1,2 @@
+# Used only when running with --ai. Pure offline parsing needs no dependency.
+google-genai>=2.30,<3.0

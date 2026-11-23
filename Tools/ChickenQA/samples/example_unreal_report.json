@@ -1,0 +1,12 @@
+{
+  "reportCreatedOn": "2026.11.17-00.00.00",
+  "succeeded": 1,
+  "failed": 1,
+  "succeededWithWarnings": 0,
+  "notRun": 0,
+  "totalDuration": 0.32,
+  "tests": [
+    {"fullTestPath": "ChickenQA.Collision.Direction", "state": "Success", "duration": 0.12, "errors": 0},
+    {"fullTestPath": "ChickenQA.Knockdown.Threshold", "state": "Fail", "duration": 0.20, "errors": 1}
+  ]
+}

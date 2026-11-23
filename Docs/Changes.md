@@ -1,5 +1,20 @@
 ﻿# 변경 이력
 
+<a id="change-20261124-chickenqa-fault-demo"></a>
+## 2026-11-24 · ChickenQA 결함 탐지·복원 시연
+
+- Codex 수행 · 미커밋 · 요청자 GitHub ID 확인 필요. 충격 전달 호출 한 곳을 임시 제거하고 정상 6개 성공 → 충돌 검사만 실패 → 원본 복원·재빌드 후 6개 성공을 UE 5.8.2에서 검증했다. 테스트 조건은 유지했고 원본/복원 해시 일치 및 단계별 로그·JSON·보고서를 보존했다. 실제 게임 버그 발견 사례와 구분해 의도적 결함 주입 실험으로 설명한다. [실행·복원·시연 안내](../Tools/ChickenQA/docs/FAULT_DEMO.md).
+
+<a id="change-20261124-chickenqa-gameplay"></a>
+## 2026-11-24 · ChickenQA 게임 동작 회귀 검사
+
+- Codex 수행 · 미커밋 · 요청자 GitHub ID 확인 필요. 임시 월드에서 이동 입력/차단, 충돌 응답/중복 방지, 네 방향 넘어짐 경계 검사를 추가했다. 테스트 전용 friend 접근 외 게임 알고리즘은 변경하지 않았다. UE 5.8.2 빌드 및 기존 설정 검사 포함 6개 Success, 보고서 생성 확인. 실제 맵 충돌 검출·Blueprint·멀티플레이는 범위 밖이다. [검증 범위](../Tools/ChickenQA/docs/STEP4_UNREAL_AUTOMATION.md#게임-동작-회귀-테스트-2026-11-24-추가).
+
+<a id="change-20261124-chickenqa-smoke-build"></a>
+## 2026-11-24 · ChickenQA 테스트 빌드·실행 연결
+
+- Codex 수행 · 미커밋 · 요청자 GitHub ID 확인 필요. 테스트 추가 전 DLL로 실행하여 `ChickenQA.Character`를 찾지 못한 문제를 Editor 재빌드로 해결했다. 실행 스크립트에 `-BuildEditor`를 추가하고 로그 패턴 집계와 JSON 테스트 결과 표시를 구분했다. UE 5.8.2에서 기본 설정 테스트 3개 성공 및 로컬 보고서 생성을 확인했다. 실제 게임 동작 검증과 Gemini 호출은 이번 검증 범위가 아니다. [사용법과 검증 범위](../Tools/ChickenQA/docs/STEP4_UNREAL_AUTOMATION.md).
+
 <a id="change-20261116-docs-current-paths"></a>
 ## 2026-11-16 · main 문서의 연결 상태와 정리된 경로 대조
 

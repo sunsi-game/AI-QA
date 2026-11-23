@@ -13,6 +13,8 @@
 | EOS 자동 매칭 | [클라이언트 인계](EOS/unreal-client-handoff.md) | [API 계약](EOS/unreal-matchmaking-ticket-api.md), [백엔드 운영](../Backend-Infra/README.md) |
 
 ## 관리와 기록
+- [ChickenQA 결함 탐지 시연](../Tools/ChickenQA/docs/FAULT_DEMO.md) — 정상·결함 주입·복원 후 결과 비교와 시연 순서.
+- [ChickenQA 자동 테스트 실행](../Tools/ChickenQA/docs/STEP4_UNREAL_AUTOMATION.md) — Editor 빌드, 기본 설정 3개·게임 동작 3개, 로컬 분석 보고서 연결.
 - [변경 이력](Changes.md)
 - [AI 작업·문서 관리 설계와 사용 안내](Guides/AI-Workflow-Design.md) — 사람용 참고, 일반 작업의 필수 지침 아님.
 - [전체 문서 갱신 요청문](../.agents/prompts/refresh-project-docs.md)

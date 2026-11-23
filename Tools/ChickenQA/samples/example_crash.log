@@ -1,0 +1,8 @@
+LogTemp: Warning: [PushDispatch] BP_ChickenCharacter_C_3 <-> BP_ChickenCharacter_C_1 | TestPush=300.0
+LogTemp: Warning: [PushApply] Target=BP_ChickenCharacter_C_3 | Impulse=X=-300.000 Y=0.000 Z=0.000 | Mode=3
+LogChickenMovement: Warning: [MovementUpdate] Dt=0.016 Input=X=1.0 Y=0.0 Z=0.0 Fallen=0
+LogTemp: Warning: [PushStop] Cooldown: Elapsed=0.000 / Limit=0.200
+LoginId: EXAMPLE_LOGIN_ID
+EpicAccountId: EXAMPLE_EPIC_ACCOUNT_ID
+Unhandled Exception: EXCEPTION_ACCESS_VIOLATION reading address 0xffffffffffffffff
+UnrealEditor_DKUEndGame_patch_0!AChickenCharacter::~AChickenCharacter() [C:\Users\ExampleUser\Desktop\DKUEndGame\Intermediate\Build\ChickenCharacter.gen.cpp:1372]
